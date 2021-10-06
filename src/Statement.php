@@ -43,4 +43,15 @@ class Statement
     {
         $this->products[] = $product;
     }
+
+    public function isValid(): bool
+    {
+        $sum = 0;
+
+        foreach ($this->products as $product) {
+            $sum += $product->getPrice();
+        }
+
+        return $sum === $this->balance->getTotalPrice();
+    }
 }
