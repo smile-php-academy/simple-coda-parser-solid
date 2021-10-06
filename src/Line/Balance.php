@@ -6,6 +6,8 @@ namespace App\Line;
 
 class Balance
 {
+    use RawLineTrait;
+
     private int $totalPrice;
 
     public function getTotalPrice(): ?int

@@ -6,6 +6,8 @@ namespace App\Line;
 
 class Product
 {
+    use RawLineTrait;
+
     private string $reference;
     private int $price;
 

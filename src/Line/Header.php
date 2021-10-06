@@ -6,6 +6,8 @@ namespace App\Line;
 
 class Header
 {
+    use RawLineTrait;
+
     private string $date;
 
     public function getDate(): string

@@ -10,6 +10,8 @@ class FileReader
     {
         $content = file_get_contents($filename);
 
-        return explode('\n', $content);
+        $lines = explode(PHP_EOL, $content);
+
+        return array_filter($lines);
     }
 }
